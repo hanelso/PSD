@@ -5,24 +5,25 @@
 
 # 세팅
 
-- npm 
+- node_module 설치
 
 ```
-	$ npm init
+	$ cd PSD
+	$ npm install
 ```
 
 - DB Server 시작
 
 ```
 	$ cd PSD/db_server
-	$ node 
+	$ npm start
 ```
 
 - Main Server 시작
 
 ```
 	$ cd PSD/main_server
-	$ node ./bin/www
+	$ npm start
 ```
 
 
