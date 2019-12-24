@@ -8,7 +8,7 @@
 - node_module 설치
 
 ```
-	$ cd PSD
+	$ cd main_server
 	$ npm install
 ```
 
