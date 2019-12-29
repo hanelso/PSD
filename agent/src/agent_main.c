@@ -60,7 +60,7 @@ EResult Agent_create( hc_handle* phAgentUnit )
 
     memset( pstAgentUnit, 0, sizeof( struct SAgentUnit ) );
 
-    pstAgentUnit->hHandle = HANDLE_ID_AGENT_UNIT;
+    pstAgentUnit->handleID = HANDLE_ID_AGENT_UNIT;
 
     pstAgentUnit->hWorkerFactory = INVALID_HANDLE;
     pstAgentUnit->hReceptor = INVALID_HANDLE;

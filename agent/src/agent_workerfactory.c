@@ -17,7 +17,7 @@ EResult WorkerFactory_create( hc_handle* phWorkerFactory )
     }
 
     pstWorkFact->handleID = HANDLE_ID_WORKER_FACTORY;
-    pstWorkFact->pahWorker = NULL;
+    pstWorkFact->pastWorker = NULL;
     pstWorkFact->uWorkerCount = 0;
 
     *phWorkerFactory = pstWorkFact;
@@ -33,6 +33,7 @@ EResult WorkerFactory_finalize( hc_handle hWorkerFactory )
 {
     EResult result = NO_ERROR;
     struct SWorkerFactory* pstWorkFact = NULL;
+    struct SWorker* pstWorker = NULL;
     hc_int  nIndex = 0;
 
     if( hWorkerFactory == NULL )
@@ -43,7 +44,9 @@ EResult WorkerFactory_finalize( hc_handle hWorkerFactory )
 
     for( nIndex = 0; nIndex < pstWorkFact->uWorkerCount; nIndex++ )
     {
-        WORKER_FINALIZE( pstWorkFact->pahWorker[ nIndex ] )
+        pstWorker = ( struct SWorker* )&pstWorkFact->pastWorker[ nIndex ];
+
+        pstWorker->fnFinalize()
     }
     
 

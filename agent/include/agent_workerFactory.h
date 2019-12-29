@@ -15,7 +15,20 @@ struct SWorkerFactory
     EHandle handleID;
 
     hc_uint     uWorkerCount;
-    hc_handle*  pahWorker;
+    hc_handle*  pastWorker;
+};
+
+typedef EResult ( *FnCreateWorker ) ( hc_handle* phHandle );
+typedef EResult ( *FnFinalizeWorker ) ( hc_handle hHandle );
+typedef EResult ( *FnWorkWorker ) ( hc_handle hHandle );
+
+struct SWorker
+{
+    EHandle handleID;
+
+    FnCreateWorker fnCreate;
+    FnFinalizeWorker fnFinalize;
+    FnWorkWorker fnWork;
 };
 
 
