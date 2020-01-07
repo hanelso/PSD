@@ -6,6 +6,8 @@ var logger = require('morgan');
 var compression = require("compression");
 var helmet = require("helmet");
 
+// config 정보
+const config = require("./config/index");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
