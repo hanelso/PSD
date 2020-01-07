@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var compression = require("compression");
 var helmet = require("helmet");
+var mongoose = require("mongoose");
 
 // config 정보
 const config = require("./config/index");
@@ -26,9 +27,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 라우터 등록
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// mongoose로 mongoDB 연결
+mongoose.Promise = global.Promise;
+mongoose.connect(config.db.uri, config.db.options)
+.then(() => console.log("Successfully connected to mongodb"))
+.catch(e => console.error(e));
 
 // Error 처리하는 코드.
 // catch 404 and forward to error handler
