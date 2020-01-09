@@ -69,29 +69,33 @@
 ## 5. Database Information ( DB 정보 )			
 	
 ### 5.1 회원정보
-No	컬럼명							자료형				유일키		키
-1	회원 식별코드		userId			ObjectID			Y			PK
-2	아이디			id				String				Y		
-3	비밀번호			password		String			
-4	이름				nickname		String	
-5	권한 종류			permission		Number
-6	가입날짜			joinDate		Date
-7	최근 수정 날짜		modifiedDate	Date		
+No 	컬럼명							자료형			유일키		키
+1.	회원 식별코드 		_id				ObjectId 		Y			PK
+2. 	아이디			userId 			String			Y			
+3.  비밀번호			password		String	
+4. 	이름				nickname		String
+5. 	권한 종류			permission		Number		
+6. 	가입 날짜			joinDate		Date
+7.	최근 수정 날짜		modifiedDate	Date				
          
 
 ### 5.2 기기정보
-No	컬럼명			자료형		유일키		키
-1	기기 식별코드		VARCHAR2	Y			PK
-2	기기 이름			VARCHAR2	N		
-3	기기 OS 정보					
-4	기기 IP 주소					
-5	기기 port 정보					
+No	컬럼명							자료형			유일키		키
+1.	기기 식별코드		_id				ObjevtId		Y			PK
+2.	기기 이름			name			String			N		
+3.	기기 OS 정보		os				String
+4.	기기 IP 주소		ipAddress		String	
+5.	기기 port 정보		port			String
+6.	기기 로그인 정보	loginStatus		Boolean
+7.	기기 사용자코드		userId			ObjectId
+8.	기기 등록날짜		joinDate		Date
+9.	최근 수정 날짜		modifiedDate	Date	
 						
 						
 ### 5.3 로그정보
-No	컬럼명			자료형		크기		유일키	Null허용		키
-1	로그 식별코드		VARCHAR2	15		Y		N			PK
-2	기기 식별코드		VARCHAR2	20		N		N	
+No	컬럼명						유일키		키
+1	로그 식별코드					Y			PK
+2	기기 식별코드					N			
 3	로그 종류					
 4	로그 날짜					
 						
