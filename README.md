@@ -12,13 +12,6 @@
 	$ npm install
 ```
 
-- DB Server 시작
-
-```
-	$ cd PSD/db_server
-	$ npm start
-```
-
 - Main Server 시작
 
 ```
