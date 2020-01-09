@@ -3,6 +3,7 @@ const config = {
 	//env = "development",
 	ip : "http://localhost:",
 	PORT : 3000,
+	secret : "weekness_psd",
 	//mongoDB 계정 정보 입력
 	db : {
 		id : "psd_admin",

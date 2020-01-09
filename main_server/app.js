@@ -6,6 +6,7 @@ var logger = require('morgan');
 var compression = require("compression");
 var helmet = require("helmet");
 var mongoose = require("mongoose");
+var session = require("express-session");
 
 // config 정보
 const config = require("./config/index");
@@ -26,6 +27,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Development용 Session
+app.use(session({
+	secret : config.secret,
+	resave : false,
+	saveUninitialized : true,
+	cookie : {}
+}));
 
 // 라우터 등록
 app.use('/', indexRouter);
