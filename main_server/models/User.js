@@ -39,3 +39,7 @@ UserSchema.methods.login = function(loginInfo, finalcallback)
 }
 
 module.exports = mongoose.model("User", UserSchema, "users");
+
+
+
+//https://www.zerocho.com/category/MongoDB/post/59a1870210b942001853e250

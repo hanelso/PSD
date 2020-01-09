@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// mongoose로 mongoDB 연결
+// config에 있는 DB 정보와 mongoose로 mongoDB 연결
 mongoose.Promise = global.Promise;
 mongoose.connect(config.db.uri, config.db.options)
 .then(() => console.log("Successfully connected to mongodb"))
