@@ -13,6 +13,7 @@ const config = require("./config/index");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var devicesRouter = require('./routes/devices')
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use(session({
 // 라우터 등록
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use("/devices", devicesRouter);
 
 // config에 있는 DB 정보와 mongoose로 mongoDB 연결
 mongoose.Promise = global.Promise;
