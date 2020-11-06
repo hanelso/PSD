@@ -1,0 +1,37 @@
+function PreloadFiles takes nothing returns nothing
+
+	call PreloadStart()
+	call Preload( "유저 아이디: hanelso92#3912" )
+	call Preload( "세이브 코드: 5Nu25sfgdGhjtSzaUNHkrY7cH0OU0X8Bj0PKuJu7up@TP3FrVtmh%YheWg-QD" )
+	call Preload( "클리어 게시글 제목 양식 자동 생성 / 밑의 양식을 그대로 복사하여 클리어 게시글의 제목으로 사용하세요" )
+	call Preload( "
+hanelso92#3912 / S / 5.3F2 / 클리어 점수 : -210.9점 / 획득 점수 : 6점 / 근이#3508 [39] / Ael#3970 [40] / Huni#31187 [40] / hanelso92#3912 [40] / 통합 점수 : 6점 / 클리어 횟수 : 1회
+" )
+	call Preload( "==================================================================" )
+	call Preload( "코드 사용법" )
+	call Preload( "위 코드를 Ctrl+C로 복사하신 다음 '제한시간' 일 때, 채팅창에 Ctrl+V로 붙여넣으세요." )
+	call Preload( "위 코드는 나루토 랜덤 디펜스 리버스 버전 전용 세이브 코드입니다." )
+	call Preload( "나루토 랜덤 디펜스 리버스 공식카페 주소 : cafe.naver.com/nrdrs2" )
+	call Preload( "★ 공식 카페에 게임 클리어 인증을 하지 않으면 세이브 초기화 시 보상을 받을 수 없습니다." )
+	call Preload( "★ 반드시 공식 카페를 확인 해주세요." )
+	call Preload( "==================================================================" )
+	call Preload( " NRD Reverse Save Data / 초기화 일자 : 20/03/16 " )
+	call Preload( " 세이브 버전 : 1 " )
+	call Preload( " 누적 점수 : 6" )
+	call Preload( "==================================================================" )
+	call Preload( " 이자나미 누적 클리어 횟수 : 0" )
+	call Preload( " SS Rank 누적 클리어 횟수 : 0" )
+	call Preload( " S Rank 누적 클리어 횟수 : 1" )
+	call Preload( " A Rank 누적 클리어 횟수 : 0" )
+	call Preload( " B Rank 누적 클리어 횟수 : 0" )
+	call Preload( " C Rank 누적 클리어 횟수 : 0" )
+	call Preload( " D Rank 누적 클리어 횟수 : 0" )
+	call Preload( "==================================================================" )
+	call Preload( "==================================================================
+" )
+	call Preload( "==================================================================" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+
